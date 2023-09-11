@@ -1,0 +1,504 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &755331891051176771
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755331891051176799}
+  - component: {fileID: 755331891051176798}
+  - component: {fileID: 755331891051176769}
+  - component: {fileID: 755331891051176768}
+  m_Layer: 0
+  m_Name: Bee AI
+  m_TagString: GuardAI
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &755331891051176799
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755331891051176771}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 755331890784990723}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &755331891051176798
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755331891051176771}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!136 &755331891051176769
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755331891051176771}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 0
+  m_Radius: 0.3
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &755331891051176768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755331891051176771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8a5f7787bcb6447a0791935a47e172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  enemyAI: {fileID: 0}
+  alarmSearchArea: {fileID: 1264018481654243212, guid: 67efabf7b1374c1439ac6bff91f12c5b, type: 3}
+  prefabClone: {fileID: 1264018481654243212, guid: 67efabf7b1374c1439ac6bff91f12c5b, type: 3}
+  enemySpeed: 0
+  patrolWaypoints: []
+  patrolWaypointIndex: 0
+  distanceToWaypoint: 0
+  distanceFinishPatrol: 0
+  isWaypointReached: 0
+  isPlayerVisible: 0
+  isPatrolling: 0
+  playerChaseRange: 0
+  rayRadius: 0
+  raycastDirection: {x: 0, y: 0, z: 0}
+  currentPrefabs: 0
+  desiredPrefabs: 0
+  prefabLifeTime: 0
+  enemyDMGTaken: 0
+  enemyHP: 0
+  enemyMaxHP: 0
+--- !u!1001 &3004895838273098993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 755331891051176799}
+    m_Modifications:
+    - target: {fileID: 2578577426830331398, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331398, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_VersionIndex
+      value: 4386
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Shape
+      value: 3730483958423224409
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082660]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082788]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816865]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816985]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817577]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735117]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224409]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082660].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082788].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816865].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816985].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817577].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735117].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224409].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082660].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082788].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816865].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816985].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817577].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735117].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331399, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224409].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331401, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426830331402, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538663, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538663, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_VersionIndex
+      value: 3632
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Shape
+      value: 3730483958423224462
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082601]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082729]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816819]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817039]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817631]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735170]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538664, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224462]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538666, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577426844538667, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763749, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763749, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_VersionIndex
+      value: 4329
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Shape
+      value: 3730483958423224406
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082586]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082714]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816921]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816982]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817574]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735114]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224406]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cone
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082586].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082714].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816921].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816982].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817574].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735114].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224406].m_Smooth
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082586].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082714].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816921].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816982].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817574].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735114].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763750, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224406].m_NumberOfSides
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763752, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577427009763753, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.862
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70495063
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7092564
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.349
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350195, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350195, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_VersionIndex
+      value: 5645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Shape
+      value: 3730483958423224391
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082624]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483919473082752]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816883]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854816967]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483956854817559]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483957338735099]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350196, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: managedReferences[3730483958423224391]
+      value: Unity.ProBuilder UnityEngine.ProBuilder.Shapes.Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350198, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350199, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350199, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2578577428684350200, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Name
+      value: Bee
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677213122620701971, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Range
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677213122620701971, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677213122620701971, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677213122620701971, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.14122522
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677213122620701971, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_Intensity
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677213122620701971, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_SpotAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7677213122620701971, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+      propertyPath: m_InnerSpotAngle
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+--- !u!4 &755331890784990723 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2578577428684350194, guid: 17db0a0a2228ff64e90201891a32da0d, type: 3}
+  m_PrefabInstance: {fileID: 3004895838273098993}
+  m_PrefabAsset: {fileID: 0}
